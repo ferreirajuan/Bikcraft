@@ -9,14 +9,24 @@ body {
     justify-items: center;
     background-color: #f7f7f7;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.2em;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .titulo {
+    width: 10em;
     margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.links a {
+header .links a {
     text-decoration: none;
     color: black;
     background-color: #fff;
@@ -25,9 +35,7 @@ body {
     text-transform: uppercase;
 }
 
-
-
-.links {
+header .links {
     display: flex;
     text-align: center;
     margin-top: 2em;
@@ -73,7 +81,8 @@ body {
     background-color: #ee2211;
 }
 
-.box .detalhe {
+.box .detalhe::before {
+    content: "";
     background-color: #ee2211;
     padding: 0.1em;
     position: absolute;
@@ -82,18 +91,27 @@ body {
     right: -1.5em;
 }
 
-.box .vantagens-title {
-    background-color: #f7f7f7;
+.box .vantagens-titulo {
+    background-image: url(img/onda.svg);
+    display: flex;
+}
+
+.box .vantagens-titulo .vantagens-title {
+    display: flex;
     font-size: 64px;
     text-transform: uppercase;
     color: #c6c6c6;
-    align-content: center;
-    text-align: center;
+    align-items: center;
+    text-align: right;
 }
 
 .box .vantagens {
     padding: 3em;
     background-color: #ffffff;
+}
+
+.box .vantagens li{
+    list-style-type: none;
 }
 
 .box .vantagens .vantagens-item {
@@ -107,7 +125,6 @@ body {
     grid-column: 2
 }
 
-
 footer {
     background-color: #ffffff;
     margin-top: 4em;
@@ -116,7 +133,15 @@ footer {
     text-align: center;
 }
 
-a:hover {
-    background-color: #ee2211;
+header .links a:hover {
+    border: solid 0.1em #ee2211;
 }
 
+main section .box .botao:hover {
+    background-color: #900;
+}
+
+
+.lista li:nth-child(odd) {
+    background: #f7f7f7;
+}

@@ -33,6 +33,7 @@ header .links a {
     padding: 1em;
     border-radius: 0.5em;
     text-transform: uppercase;
+    border: solid 4px transparent;
 }
 
 header .links {
@@ -121,6 +122,10 @@ header .links {
     gap: 10px 20px;
 }
 
+.vantagens-item:hover {
+    border-left: 2px solid #ee2211;
+}
+
 .box .vantagens .vantagens-item p{
     grid-column: 2
 }
@@ -134,7 +139,7 @@ footer {
 }
 
 header .links a:hover {
-    border: solid 0.1em #ee2211;
+    border-color: #ee2211;
 }
 
 main section .box .botao:hover {

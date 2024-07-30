@@ -12,6 +12,8 @@ body {
     font-size: 1.2em;
 }
 
+
+
 header {
     display: flex;
     flex-direction: column;
@@ -51,9 +53,10 @@ header .links {
     max-width: 1000px;
 }
 
-.box img {
+.box .bike-foto {
     max-width: 100%;
     display: block;
+    height: 100%;
 }
 
 .box .descricao {
@@ -95,6 +98,8 @@ header .links {
 .box .vantagens-titulo {
     background-image: url(img/onda.svg);
     display: flex;
+    justify-content: center;
+    padding: 2em;
 }
 
 .box .vantagens-titulo .vantagens-title {
@@ -122,6 +127,7 @@ header .links {
     gap: 10px 20px;
 }
 
+
 .vantagens-item:hover {
     border-left: 2px solid #ee2211;
 }
@@ -136,6 +142,7 @@ footer {
     padding: 3em;
     width: 100%;
     text-align: center;
+    
 }
 
 header .links a:hover {
@@ -149,4 +156,40 @@ main section .box .botao:hover {
 
 .lista li:nth-child(odd) {
     background: #f7f7f7;
+}
+
+
+
+@media(max-width:850px) {
+    .box {
+        grid-template-columns: 1fr;
+    }
+    
+
+    .box .vantagens-titulo .vantagens-title {
+        font-size: 50px;
+    }
+
+    header .links {
+        gap: 1em;
+    }
+
+    .box .detalhe::before {
+        display: none;
+    }
+
+    .box .descricao {
+        justify-items: start;
+        text-align: start;
+        font-size: 20px;
+    }
+
+    .box .vantagens-titulo .vantagens-title {
+        text-align: center;
+    }
+
+    .box .vantagens .vantagens-item {
+        font-size: 20px;
+    }
+
 }
